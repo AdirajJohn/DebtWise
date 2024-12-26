@@ -4,11 +4,21 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
-  Check-Git-Action:
+  Build-and-Push:
     runs-on: ubuntu-latest
 
     steps:
-      - name: sample
-        run: echo "Print hello world"
+    #Checkout the repository
+      - name: Checkout Repository 
+        uses: actions/checkout@v4
+
+      - name: Get current date
+        id: date
+        run: echo "date=$(date + '%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Print date var
+        run: echo "${{ env.date }}"
+        
