@@ -44,6 +44,7 @@ jobs:
           tags: |
             ${{ secrets.DOCKER_USERNAME}}/debtwise:latest
             ${{ secrets.DOCKER_USERNAME}}/debtwise:${{steps.date.outputs.current_date}}
+            
 
       - name: Docker Logout
         run: docker logout
