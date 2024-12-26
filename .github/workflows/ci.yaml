@@ -17,11 +17,14 @@ jobs:
 
       - name: Get current date
         id: date
-        run: echo "date=$(date + "%Y-%m-%d")" >> $GITHUB_ENV
+        run: |
+          echo "date_today=$(date + "%Y-%m-%d")" >> $GITHUB_ENV
+          echo "::set-output name=current_date::$(date +'%Y-%m-%d')"
 
       - name: Print date var
         run: |
-          echo "Print current date ${{env.date}}"
+          echo "Print current date $date_today"
           date
           date +"%Y-%m-%d %H:%M:%S"
+          echo "print ${{steps.date.outputs.current_date}}"
         
