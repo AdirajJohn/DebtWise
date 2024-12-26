@@ -1,0 +1,14 @@
+name: DockerHub Ci
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Check-Git-Action:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: sample
+        run: echo "Print hello world"
