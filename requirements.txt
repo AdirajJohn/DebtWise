@@ -2,3 +2,6 @@ pandas
 numpy
 seaborn
 matplotlib
+fastapi
+sqlalchemy
+psycopg2-binary
