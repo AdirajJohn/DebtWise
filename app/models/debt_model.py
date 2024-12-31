@@ -1,6 +1,6 @@
-from schemas.debt_schema import schemas
-
-print(schemas.test_schemas)
+from app.schemas.debt_schema import schemas
+s = schemas()
+print(s.test_schemas)
 
 class dept_model:
-    test_model = "test_model" + str(schemas.test_schemas)
+    test_model = "test_model" + str(s.test_schemas)
