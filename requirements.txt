@@ -5,3 +5,4 @@ matplotlib
 fastapi
 sqlalchemy
 psycopg2-binary
+uvicorn

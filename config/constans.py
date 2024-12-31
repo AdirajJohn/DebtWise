@@ -1,0 +1,2 @@
+class DebtWise:
+    debtapp = "debtwise"
