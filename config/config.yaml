@@ -1,0 +1,5 @@
+
+artifacts_root: artifacts
+
+database_constants:
+    db_name: DebtDB
