@@ -1,2 +1,0 @@
-class DebtWise:
-    debtapp = "debtwise"
